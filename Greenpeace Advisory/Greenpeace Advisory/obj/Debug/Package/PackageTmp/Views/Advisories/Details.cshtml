@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Greenpeace_Advisory.Models.Recipient>
+
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Advisory</h4>
+    <hr />
+
+    <p>@ViewBag.Advisory</p>
+
+    <table class="table">
+        <tr>
+            <th>
+                Farmer Name
+            </th>
+            <th>
+                Contact Number
+            </th>
+            <th>
+                Status
+            </th>
+        </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.ContactNumber</td>
+                    <td>@item.Status</td>
+                </tr>
+            }
+    </table>
+
+</div>

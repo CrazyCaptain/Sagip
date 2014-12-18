@@ -1,0 +1,328 @@
+﻿@charset "UTF-8";
+/* CSS Document */
+
+
+/*text styling*/
+
+.nav_style {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 14px;
+	color: #3e3e3c;
+}
+
+
+.title {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 15px;
+	color: #6b912b;
+}
+
+.copy {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 12px;
+	color: #3e3e3c;	
+}
+
+.caption {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 11px;
+	color: #838383;	
+}
+
+/*homepage*/
+
+body {
+	margin: 0px;
+	padding: 0px;	
+}
+
+#top_bar {
+	width: 100%;
+	height: 10px;
+	background-color: #5f8c47;
+}
+
+#header {
+	width: 960px;
+	height: 150px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#logo {
+	width: 298px;
+	height: 121px;
+	background-image:url(../Images/sagip_logo.png);
+	margin-top: 30px;
+
+}
+
+#divider1 {
+	width: 960px;
+	height: 1px;
+	background-color: #6b912b;
+    margin: 20px auto;
+	/*margin-left: auto;*/
+	/*margin-right: auto;
+	margin-top: 20px;
+	margin-bottom: -100px;*/
+}
+
+#divider2 {
+	width: 960px;
+	height: 1px;
+	background-color: #6b912b;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -25px;
+}
+
+#nav_container {
+	margin-left: auto;
+	margin-right: auto;
+	width: 960px;
+	height: 50px;
+	padding: 0px;
+}
+
+#section1 {
+	width: 960px;
+	height: 540px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#title1 {
+	width:200px;
+	height: auto;
+	margin-top: 40px;
+	margin-bottom: 15px;
+}
+
+#image1 {
+	width: 470px;
+	height: 400px;
+	float: left;
+	margin-right: 20px;
+	background-color:#CCC;
+	background-image:url(../Images/image1.jpg);
+}
+
+#text1 {
+	width: 470px;
+	height: 400px;
+	float: left;
+}
+
+#caption1 {
+	margin-top: 10px;
+	width: 460px;
+	height: auto;
+	float: left;
+}
+
+#divider3 {
+	width: 960px;
+	height: 1px;
+	background-color: #6b912b;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+#section2 {
+	width: 960px;
+	height: 530px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#title2 {
+	width:200px;
+	height: auto;
+	margin-top: 40px;
+	margin-bottom: 15px;
+}
+
+
+#banner {
+	width: 960px;
+	height: 235px;
+	margin-left: auto;
+	margin-right: auto;
+	background-image: url(../Images/banner.jpg);
+}
+
+#column1 {
+	width: 470px;
+	height: 165px;
+	float: left;
+	margin-right: 20px;
+	margin-top: 15px;
+}
+
+#column2 {
+	width: 470px;
+	height: 150px;
+	float: left;
+	margin-top: 15px;
+}
+
+#divider4 {
+	width: 960px;
+	height: 1px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #6b912b;
+	margin-bottom: 10px;
+}
+
+#footer_main {
+	width: 960px;
+	height: 200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#link_column1 {
+    
+	/*width: 350px;*/
+	height: auto;
+	float: left;
+}
+.footer-bottom {
+    padding-top: 240px;
+}
+
+@media (min-width: 768px) {
+    #link_column1 {
+        margin-left: 100px;
+    }
+    .footer-bottom {
+        padding-top: inherit;
+    }
+}
+
+#link1 {
+	width: 200px;
+	height: 20px;
+	margin-top: 10px;
+	clear: right;
+}
+
+#link2 {
+	width: 200px;
+	height: 20px;
+	margin-top: 10px;
+	clear: right;
+}
+
+#link3 {
+	width: 200px;
+	height: 20px;
+	margin-top: 10px;
+	clear: right;
+}
+
+#link_column2 {
+	width: 200px;
+	height: auto;
+	float: left;
+}
+
+#link4 {
+	width: 200px;
+	height: 20px;
+	margin-top: 10px;
+}
+
+#link5 {
+	width: 200px;
+	height: 20px;
+	margin-top: 10px;
+}
+
+#link6 {
+	width: 200px;
+	height: 20px;
+	margin-top: 10px;
+}
+
+#greenpeace_logo {
+	width: 150px;
+	height: 84px;
+	float: left;
+	margin-top: 10px;
+	margin-left: 80px;
+	background-image:url(../Images/greenpeace_logo.jpg);
+}
+
+#org_logo {
+	width: 150px;
+	height: 150px;
+	background-color: #CCC;
+	float: left;
+	margin-top: 10px;
+	margin-left: 20px;
+}
+
+
+#copyright {
+	width: 200px;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+/*-------------------*/
+nav {
+	height: 5px;
+	margin-top: .5px;
+}
+
+nav ul {
+	padding: 0;
+	margin: 0;
+
+	width: 600px;
+}
+
+nav ul li {
+	list-style-type: none;
+	width: 150px;
+	float: left;
+}
+
+li a {
+	text-decoration: none;
+	line-height: 5px;
+	text-align: left;
+}
+
+li a:hover {
+	color: #9CCC44;
+}
+
+a:link {
+	color: #3e3e3c;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+	color: #666;
+}
+a:active {
+	text-decoration: none;
+}
+
+.sponsor-link {
+    height:80px;
+}
+.sponsor-container {
+    margin-top:80px !important;
+}

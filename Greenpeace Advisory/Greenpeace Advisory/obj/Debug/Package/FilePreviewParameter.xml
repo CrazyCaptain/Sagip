@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="sagip" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\ADA\\Documents\\GitHub\\Sagip\\Greenpeace\ Advisory\\Greenpeace\ Advisory\\obj\\Debug\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\ADA\\Documents\\GitHub\\Sagip\\Greenpeace\ Advisory\\Greenpeace\ Advisory\\obj\\Debug\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="DefaultConnection-Web.config Connection String" description="" value="Data Source=tcp:j1mg4ru6sx.database.windows.net,1433;Initial Catalog=sagip_db;User Id=gp@j1mg4ru6sx;Password=Gr33nP3ac3" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\ADA\\Documents\\GitHub\\Sagip\\Greenpeace\ Advisory\\Greenpeace\ Advisory\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+</parameters>

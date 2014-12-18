@@ -1,0 +1,44 @@
+﻿@model Greenpeace_Advisory.Models.Farmer
+
+@{
+    ViewBag.Title = "Details";
+    List<Greenpeace_Advisory.Models.ContactDetail> ContactList = ViewBag.ContactDetails;
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Farmer</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            Name
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LastName), @Html.DisplayFor(model => model.FirstName) @Html.DisplayFor(model => model.MiddleName)
+        </dd>
+       
+        <dt>
+            Contact Info
+        </dt>
+        <dd>
+            <ul class="list-group col-md-6">
+                @{ if (ContactList != null)
+                 {
+                     foreach (var item in ContactList)
+                     {
+                        <li class="list-group-item"><span>@item.MobileNumber &nbsp;</span>@Html.ActionLink("Delete", "Delete", "ContactDetails", new { id = @item.ContactDetailId }, new { @class = "navbar-right"})</li>
+                     }
+                 }
+                }
+            </ul>
+        </dd>
+        <dd>@Html.ActionLink("Add Contact Detail", "Create", "ContactDetails", new { id = Model.FarmerID }, null)</dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.FarmerID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

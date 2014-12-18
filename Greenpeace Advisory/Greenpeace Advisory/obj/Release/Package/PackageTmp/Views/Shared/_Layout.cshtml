@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - SAGIP - buhay at saka</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/greenpeace_style.css" rel="stylesheet" />
+</head>
+<body>
+    <!--Top Bar made by Sheila-->
+    <div id="top_bar">
+    </div>
+    <div id="header">
+        @*<div id="logo"></div>*@
+        <div class="container" style="padding:20px; border-bottom:1px solid #6b912b">
+            <div class="col-md-2" style="background:url('../../Images/CRFS.jpg') no-repeat left; height:100px; display:inline; background-size:contain;"></div>
+            <div class="col-md-8" style="background:url('../../Images/sagip_text.png') no-repeat left; height:100px; display:inline; background-size:contain;"></div>
+            <div class="col-md-2 right" style="background:url('../../Images/ricewatc_logo.jpg') no-repeat left; height:100px; background-size:contain"></div>
+            @*<div id="divider1" class="row col-lg-12"></div>*@
+        </div>
+    </div>
+    <!-- Top Bar made by Sheila /-->
+
+
+    <div class="navbar navbar-default navbar-default-top" style="background:#fff">
+        
+        <div class="container">
+            
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("SAGIP", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                  @if (User.IsInRole("Admin") || User.IsInRole("Staff") || User.IsInRole("SuperAdmin")) { 
+                     <li>@Html.ActionLink("Advisories", "Index", "Advisories")</li>
+                     <li>@Html.ActionLink("Farmers", "Index", "Farmers")</li>
+                     <li>@Html.ActionLink("Feedback", "Index", "Feedback")</li>
+                    @*<li>@Html.ActionLink("Regions", "Index", "Regions")</li>*@
+                  }
+                   @if(User.IsInRole("SuperAdmin")||User.IsInRole("Admin")){
+                     <li>@Html.ActionLink("Admins", "RegisterIndex", "Account")</li>
+                     <li>@Html.ActionLink("Staff", "Index", "RegisterStaff")</li>  
+                       }
+
+                       
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container body-content">
+        <div id="divider2"></div>
+        @RenderBody()
+        <!--Customized Horizontal Rule by Sheila-->
+        <div id="divider4"></div>
+        <!--Customized Horizontal Rule by Sheila-->
+        <footer>            
+            @*<div id="link_column1" class="col-lg-3">
+                <div class="nav_style sponsor-link" id="link1" style="background-image: url('../../Images/logo1.jpg');"></div>
+                <div class="nav_style sponsor-container" id="link1"><img src="~/Images/logo2.jpg" class="sponsor-link" /></div>
+            </div>
+            <div id="link_column2" class="col-lg-3">
+                <div class="nav_style" id="link1"><span style="background-image:url('../../Images/logo3.jpg')" class="sponsor-link"></span></div>
+                <div class="nav_style sponsor-container" id="link1"><img src="~/Images/logo4.jpg" class="sponsor-link" /></div>
+            </div>*@
+            <div class="col-lg-3"><span style="background:url('../../Images/PAGASA_logo.jpg') no-repeat center;background-size:contain ;height:80px;width:200px;display:block;"></span></div>
+            <div class="col-lg-3"><span style="background:url('../../Images/logo2.jpg') no-repeat center;background-size:contain ;height:80px;width:200px;display:block;"></span></div>
+            <div class="col-lg-3"><span style="background:url('../../Images/logo3.jpg') no-repeat center;background-size:contain ;height:80px;width:200px;display:block;"></span></div>
+            <div class="col-lg-3"><span style="background:url('../../Images/logo4.jpg') no-repeat center;background-size:contain ;height:80px;width:200px;display:block;"></span></div>
+            <div class="container">
+                <div class="col-lg-2"><span style="background:url('../../Images/sagip_logo.png') no-repeat right;background-size:contain ;height:80px;width:200px;display:block;margin-top:20px"></span></div>
+                <div class="col-lg-8" style="background:url('../../Images/logo5.jpg') no-repeat center; background-size:contain; min-height:100px; margin-top:20px; display:inline-block"></div>
+            </div>
+            <div class="col-lg-12 text-center">
+                <p>&copy; @DateTime.Now.Year - SAGIP</p>
+            </div>
+            <!-- Therence John M. Resabal, Ahmed A. Masahud, Allen Moses B. Marzan and Sheila Renei Gomez are awesome! -->
+</footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
